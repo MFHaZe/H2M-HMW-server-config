@@ -1,10 +1,10 @@
 @echo off
 ::Name of the server shown in the title of the cmd window. This will NOT bet shown ingame.
-set name=H2M Dedicated - Default
+set name=HaZeyHosting.com H2M Dedicated - Default
 ::Name of the config file the server should use. (default: server.cfg)
 set cfg=server_default.cfg
-::Port used by the server (default: 27016)
-set port=27016
+::Port used by the server (default: 27017)
+set port=27017
 ::Only change this when you don't want to keep the bat files in the game folder. MOST WON'T NEED TO EDIT THIS!
 set gamepath=%cd%
 
