@@ -7,7 +7,8 @@ set cfg=server_default.cfg
 set port=27017
 ::Only change this when you don't want to keep the bat files in the game folder. MOST WON'T NEED TO EDIT THIS!
 set gamepath=%cd%
-
+::Enable auto restart so if the server shuts down it will restart it
+set auto_restart=1
 
 title H2M - %name% - Server restarter
 echo Server "%name%" will load %cfg% and listen on port %port% UDP!
@@ -17,4 +18,4 @@ echo (%date%)  -  (%time%) %name% server start.
 :server
 start /wait /abovenormal h2m-mod.exe "%gamepath%" -dedicated -memoryfix +exec "%cfg%" +set net_port %port% +map_rotate
 echo (%date%)  -  (%time%) WARNING: %name% server closed or dropped... server restarts.
-goto server
+if "%auto_restart%" == "1" goto server
